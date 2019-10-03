@@ -1,0 +1,51 @@
+@keyframes eyeWink {
+  0% {
+    height: inherit;
+  }
+  50% {
+    top: 190px;
+    height: 0px;
+  }
+  100% {
+    height: inherit;
+  }
+}
+
+.eyes {
+  position: absolute;
+  top: 0px;
+  left: 180px;
+  height: 80px;
+  width: 50px;
+  color: black;
+  /* background-color: currentColor; */
+  border-radius: 100%;
+  box-shadow:
+    220px 150px 0 0 currentColor;
+}
+
+.eyes::before {
+  content: "";
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  top: 150px;
+  left: 500px;
+  background-color: currentColor;
+  border-radius: 100%;
+  animation-name: eyeWink;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.eyes::after {
+  content: "";
+  position: absolute;
+  top: 115px;
+  left: 450px;
+  height: 140px;
+  width: 140px;
+  border-radius: 100%;
+  border: 5px solid gold;
+
+}
